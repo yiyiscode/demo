@@ -1,4 +1,4 @@
-!pip install plotly==5.18.0
+pip install plotly==5.18.0
 import streamlit as st
 import pandas as pd
 st.title("YOLOv8 Dashboard")
