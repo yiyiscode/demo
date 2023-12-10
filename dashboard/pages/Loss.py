@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 st.title("YOLOv8 Dashboard")
-df = pd.read_csv(r"../../runs/detect/train15/results.csv", index_col=0)
+df = pd.read_csv(r"runs/detect/train15/results.csv", index_col=0)
 
 tab1, tab2, tab3 = st.tabs(["📈 Multiple Loss", "📈 Multiple Charts", "📈 Single Loss"])
 with tab1:
@@ -9,7 +9,7 @@ with tab1:
     st.line_chart(df)
 with tab2:
     st.header("Multiple Charts in One Tab")
-    st.image(r"../../runs/detect/train15/results.png")
+    st.image(r"runs/detect/train15/results.png")
 with tab3:
     st.header("Single Loss")
     option_lst = list(df.columns)
